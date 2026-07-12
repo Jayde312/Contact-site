@@ -11,7 +11,7 @@ export default function Home() {
         <div className="relative h-64 w-full bg-sky-100">
           <Image
             src="/banner.jpg" 
-            alt="Frugal Living Beach Banner"
+            alt="TheRetiredWealthyGuides"
             fill
             className="object-cover"
             priority
@@ -33,7 +33,7 @@ export default function Home() {
           
           {/* Main Headline */}
           <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight mb-4">
-            Frugal Living and Budget Mastery
+            The Retired Wealthy Guides
           </h1>
           
           {/* Subtext */}
@@ -46,12 +46,12 @@ export default function Home() {
             <p className="text-gray-800">
               <span className="font-semibold text-base block sm:inline mr-1">WhatsApp.</span>
               <Link 
-                href="https://wa.me/+13478149594" 
+                href="https://wa.link/26glqx" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-blue-600 hover:underline break-all"
               >
-                https://wa.me/+13478149594
+                https://wa.link/26glqx
               </Link>
             </p>
             <p className="text-gray-800">
@@ -62,7 +62,7 @@ export default function Home() {
                 rel="noopener noreferrer" 
                 className="text-blue-600 hover:underline break-all"
               >
-                https://t.me/Frugal_Living_Budget_Mastery
+                https://t.me/RW_Trade_Guides
               </Link>
             </p>
           </div>
