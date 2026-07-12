@@ -6,141 +6,161 @@ export default function Home() {
   const TELEGRAM_URL = "https://t.me/RW_Trade_Guides";
 
   return (
-    <div 
-      className="min-h-screen bg-slate-50 flex justify-center items-start sm:py-16"
-      style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', minHeight: '100vh', backgroundColor: '#f8fafc', padding: '20px 10px' }}
-    >
-      {/* Container Card */}
-      <div 
-        className="w-full max-w-md bg-white shadow-xl rounded-2xl overflow-hidden border border-slate-100"
-        style={{ width: '100%', maxWidth: '440px', backgroundColor: '#ffffff', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04)', border: '1px solid #f1f5f9' }}
-      >
-        
-        {/* Banner Section */}
-        <div 
-          className="relative bg-slate-200"
-          style={{ position: 'relative', height: '240px', width: '100%', backgroundColor: '#e2e8f0' }}
-        >
-          <Image
-            src="/banner.jpg" 
-            alt="The Retired Wealthy Guides Banner"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-          />
-          
-          {/* Circular Profile Picture (Protected from layout distortion) */}
-          <div 
-            className="absolute bg-white shadow-md"
-            style={{ 
-              position: 'absolute', 
-              bottom: '-50px', 
-              left: '24px', 
-              width: '100px', 
-              height: '100px', 
-              borderRadius: '50%', 
-              border: '4px solid #ffffff', 
-              overflow: 'hidden', 
-              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)',
-              backgroundColor: '#ffffff',
-              zIndex: 10
-            }}
-          >
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      minHeight: '100vh',
+      backgroundColor: '#FAF8F4',
+      padding: '48px 16px',
+      fontFamily: 'ui-serif, Georgia, "Times New Roman", serif',
+      boxSizing: 'border-box'
+    }}>
+
+      <div style={{
+        width: '100%',
+        maxWidth: '460px',
+        backgroundColor: '#ffffff',
+        borderRadius: '4px',
+        overflow: 'hidden',
+        border: '1px solid #E4DFD6',
+        boxSizing: 'border-box'
+      }}>
+
+        {/* Header: plain photo, no badges, no gradients */}
+        <div style={{ padding: '40px 32px 0 32px', boxSizing: 'border-box' }}>
+          <div style={{
+            width: '72px',
+            height: '72px',
+            borderRadius: '50%',
+            overflow: 'hidden',
+            border: '1px solid #E4DFD6',
+            position: 'relative',
+            marginBottom: '20px'
+          }}>
             <Image
               src="/profile.jpg"
-              alt="Profile Avatar"
+              alt="Photo of [Your Name]"
               fill
               style={{ objectFit: 'cover' }}
             />
           </div>
+
+          <h1 style={{
+            fontSize: '26px',
+            fontWeight: '600',
+            color: '#1C1A17',
+            letterSpacing: '-0.01em',
+            margin: '0 0 6px 0',
+            lineHeight: '1.2',
+            fontFamily: 'ui-serif, Georgia, serif'
+          }}>
+            [Your Name]
+          </h1>
+
+          <p style={{
+            fontSize: '14px',
+            color: '#8A7F6E',
+            margin: '0 0 24px 0',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+          }}>
+            Personal finance notes &amp; investing basics
+          </p>
         </div>
 
-        {/* Text Content Area */}
-        <div 
-          className="px-6 pb-10"
-          style={{ paddingTop: '70px', paddingLeft: '24px', paddingRight: '24px', paddingBottom: '40px' }}
-        >
-          {/* Channel Badge */}
-          <div style={{ display: 'inline-block', backgroundColor: '#fef3c7', color: '#92400e', fontSize: '12px', fontWeight: 'bold', padding: '4px 12px', borderRadius: '9999px', marginBottom: '16px', border: '1px solid #fde68a' }}>
-            Official Channel
-          </div>
+        {/* Divider */}
+        <div style={{ height: '1px', backgroundColor: '#E4DFD6', margin: '0 32px' }} />
 
-          {/* Heading */}
-          <h1 style={{ fontSize: '28px', fontWeight: '900', color: '#0f172a', letterSpacing: '-0.025em', margin: '0 0 12px 0', lineHeight: '1.2' }}>
-            The Retired Wealthy Guides
-          </h1>
-          
-          {/* Description */}
-          <p style={{ fontSize: '16px', color: '#475569', margin: '0 0 24px 0', lineHeight: '1.6' }}>
-            For more info about the membership and joining the trading channel, click below to reach out on:
+        {/* Body copy — plain, specific, no urgency or wealth framing */}
+        <div style={{ padding: '28px 32px', boxSizing: 'border-box' }}>
+          <p style={{
+            fontSize: '15px',
+            color: '#3A362F',
+            lineHeight: '1.65',
+            margin: '0 0 16px 0',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+          }}>
+            I write plain-language notes on saving, investing basics, and how markets work.
+            Free to read, no cost to join.
           </p>
 
-          {/* Clean Info Block */}
-          <div style={{ backgroundColor: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '16px', marginBottom: '28px', fontSize: '14px' }}>
-            <div style={{ marginBottom: '12px' }}>
-              <strong style={{ color: '#1e293b', display: 'inline-block', width: '90px' }}>WhatsApp:</strong>
-              <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ color: '#059669', textDecoration: 'none', fontWeight: '500' }}>
-                {WHATSAPP_URL}
-              </Link>
-            </div>
-            <div style={{ height: '1px', backgroundColor: '#e2e8f0', margin: '8px 0' }} />
-            <div>
-              <strong style={{ color: '#1e293b', display: 'inline-block', width: '90px' }}>Telegram:</strong>
-              <Link href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" style={{ color: '#0284c7', textDecoration: 'none', fontWeight: '500' }}>
-                {TELEGRAM_URL}
-              </Link>
-            </div>
-          </div>
+          <p style={{
+            fontSize: '15px',
+            color: '#3A362F',
+            lineHeight: '1.65',
+            margin: '0 0 16px 0',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+          }}>
+            Some material may become paid later on. Anything free today stays free — I'll say
+            clearly if and when that changes.
+          </p>
 
-          {/* CTA Buttons */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-            {/* WhatsApp Link */}
-            <Link 
+          <p style={{
+            fontSize: '13px',
+            color: '#8A7F6E',
+            lineHeight: '1.6',
+            margin: '0 0 28px 0',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+            fontStyle: 'italic'
+          }}>
+            This is educational content, not financial advice. I'm not a licensed advisor —
+            do your own research before making investment decisions.
+          </p>
+
+          {/* Contact links — plain, no arrows-as-urgency, no shadow "premium" styling */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <Link
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'center', 
-                width: '100%', 
-                backgroundColor: '#0f172a', 
-                color: '#ffffff', 
-                padding: '14px 20px', 
-                borderRadius: '16px', 
-                fontWeight: '600', 
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                width: '100%',
+                border: '1px solid #D8D2C6',
+                color: '#1C1A17',
+                padding: '13px 16px',
+                borderRadius: '4px',
+                fontWeight: '500',
+                fontSize: '14px',
                 textDecoration: 'none',
-                boxSizing: 'border-box'
+                boxSizing: 'border-box',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
               }}
             >
-              <span>Chat on WhatsApp</span>
-              <span style={{ fontSize: '18px' }}>→</span>
+              <svg style={{ width: '16px', height: '16px', fill: '#4A4438', flexShrink: 0 }} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <span>WhatsApp</span>
             </Link>
-            
-            {/* Telegram Link */}
-            <Link 
+
+            <Link
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'center', 
-                width: '100%', 
-                backgroundColor: '#0f172a', 
-                color: '#ffffff', 
-                padding: '14px 20px', 
-                borderRadius: '16px', 
-                fontWeight: '600', 
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                width: '100%',
+                border: '1px solid #D8D2C6',
+                color: '#1C1A17',
+                padding: '13px 16px',
+                borderRadius: '4px',
+                fontWeight: '500',
+                fontSize: '14px',
                 textDecoration: 'none',
-                boxSizing: 'border-box'
+                boxSizing: 'border-box',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
               }}
             >
-              <span>Chat on Telegram</span>
-              <span style={{ fontSize: '18px' }}>→</span>
+              <svg style={{ width: '16px', height: '16px', fill: '#4A4438', flexShrink: 0 }} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.46 2.75-2.67.01-.03.01-.14-.06-.2-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.41-.49.33-.93.5-1.33.49-.44-.01-1.29-.25-1.92-.45-.77-.25-1.39-.39-1.34-.83.03-.23.35-.46.97-.71 3.82-1.66 6.37-2.75 7.66-3.27 3.65-1.48 4.41-1.74 4.9-.15z"/>
+              </svg>
+              <span>Telegram</span>
             </Link>
           </div>
-
         </div>
       </div>
     </div>
