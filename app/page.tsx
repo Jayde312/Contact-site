@@ -6,125 +6,190 @@ export default function Home() {
   const TELEGRAM_URL = "https://t.me/RW_Trade_Guides";
 
   return (
-    <div className="min-h-screen bg-[#F6F3EC] flex justify-center items-start py-0 sm:py-16 px-0 sm:px-4 font-[Inter]">
-      <div className="w-full max-w-md bg-[#FBF9F4] sm:rounded-sm overflow-hidden min-h-screen sm:min-h-0 shadow-[0_1px_2px_rgba(28,43,40,0.06)] sm:border sm:border-[#1C2B28]/10 relative">
-
-        {/* subtle top rule, ledger-style */}
-        <div className="h-[3px] w-full bg-[#1C2B28]" />
-
-        {/* Masthead */}
-        <div className="px-8 pt-10 pb-6 text-center border-b border-[#1C2B28]/12">
-          <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-5 ring-1 ring-[#1C2B28]/15 relative bg-[#E9E4D8]">
+    // Main full-screen wrapper
+    <div style={{ 
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'flex-start', 
+      minHeight: '100vh', 
+      backgroundColor: '#f1f5f9', 
+      padding: '40px 12px',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+      boxSizing: 'border-box'
+    }}>
+      
+      {/* Premium Landing Card */}
+      <div style={{ 
+        width: '100%', 
+        maxWidth: '430px', 
+        backgroundColor: '#ffffff', 
+        borderRadius: '24px', 
+        overflow: 'hidden', 
+        boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        border: '1px solid #e2e8f0',
+        boxSizing: 'border-box'
+      }}>
+        
+        {/* Banner Section */}
+        <div style={{ position: 'relative', height: '240px', width: '100%', backgroundColor: '#cbd5e1' }}>
+          <Image
+            src="/banner.jpg" 
+            alt="The Retired Wealthy Guides Banner"
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+          />
+          
+          {/* Circular Profile Avatar (Forced into position via core CSS) */}
+          <div style={{ 
+            position: 'absolute', 
+            bottom: '-52px', 
+            left: '24px', 
+            width: '104px', 
+            height: '104px', 
+            borderRadius: '50%', 
+            border: '4px solid #ffffff', 
+            overflow: 'hidden', 
+            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+            backgroundColor: '#ffffff',
+            zIndex: 10
+          }}>
             <Image
               src="/profile.jpg"
-              alt="The Retired Wealthy Guides"
+              alt="Profile Avatar"
               fill
-              className="object-cover grayscale-[15%]"
+              style={{ objectFit: 'cover' }}
             />
           </div>
-
-          <p className="text-[10px] tracking-[0.25em] uppercase text-[#8A8478] mb-3 font-medium">
-            Est. Guides &middot; Reader-Supported
-          </p>
-
-          <h1 className="font-[Fraunces] text-[2rem] leading-[1.1] font-semibold text-[#1C2B28] mb-1 relative inline-block">
-            The Retired Wealthy Guides
-            <svg
-              className="absolute left-0 -bottom-2 w-full"
-              height="6"
-              viewBox="0 0 200 6"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M1 4.2C40 1.5 80 1 120 3.3C150 5 175 2.6 199 3.8"
-                stroke="#B08D57"
-                strokeWidth="2"
-                fill="none"
-                strokeLinecap="round"
-              />
-            </svg>
-          </h1>
-
-          <p className="text-[#5C7A6E] text-sm mt-4 font-medium">
-            Plain-language market notes for people investing their own retirement
-          </p>
         </div>
 
-        {/* Body */}
-        <div className="px-8 pt-8 pb-10">
-          <p className="text-[#1C2B28]/80 text-[15px] leading-relaxed mb-8">
-            We publish weekly reading on markets and portfolio thinking &mdash;
-            written for people managing their own savings, not day-trading
-            terminals. To get the notes, reach out on either channel below.
+        {/* Content Body */}
+        <div style={{ paddingTop: '72px', paddingLeft: '24px', paddingRight: '24px', paddingBottom: '36px', boxSizing: 'border-box' }}>
+          
+          {/* Trust Badge */}
+          <div style={{ 
+            display: 'inline-flex', 
+            alignItems: 'center',
+            backgroundColor: '#fef3c7', 
+            color: '#b45309', 
+            fontSize: '12px', 
+            fontWeight: '700', 
+            padding: '6px 14px', 
+            borderRadius: '9999px', 
+            marginBottom: '14px', 
+            border: '1px solid #fde68a',
+            letterSpacing: '0.02em'
+          }}>
+            <span style={{ display: 'inline-block', width: '6px', height: '6px', backgroundColor: '#d97706', borderRadius: '50%', marginRight: '6px' }}></span>
+            Official Channel
+          </div>
+
+          {/* Headline Title */}
+          <h1 style={{ fontSize: '28px', fontWeight: '900', color: '#0f172a', letterSpacing: '-0.03em', margin: '0 0 4px 0', lineHeight: '1.15' }}>
+            The Retired Wealthy Guides
+          </h1>
+          
+          {/* Catchphrase Subheading extracted from banner artwork */}
+          <p style={{ fontSize: '13px', fontWeight: '800', color: '#059669', letterSpacing: '0.05em', textTransform: 'uppercase', margin: '0 0 16px 0' }}>
+            Plan Today for a Comfortable Tomorrow 
+          </p>
+          
+          {/* Context Explainer Paragraph */}
+          <p style={{ fontSize: '15px', color: '#475569', margin: '0 0 24px 0', lineHeight: '1.6' }}>
+             Ready to scale your portfolio? Connect directly with our team to unlock exclusive tips on our channels, signals, and elite wealth masterclass groups.
           </p>
 
-          {/* Ledger-style contact block */}
-          <div className="mb-8 border border-[#1C2B28]/15 rounded-sm overflow-hidden">
-            <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#1C2B28]/12">
-              <span className="text-xs uppercase tracking-wider text-[#8A8478] font-semibold">WhatsApp</span>
-              <Link
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1C2B28] text-sm font-medium hover:text-[#5C7A6E] underline decoration-[#B08D57]/50 underline-offset-4 truncate max-w-[220px]"
-              >
-                wa.link/26glqx
-              </Link>
+          {/* Quick Value Metrics Layout */}
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between',
+            backgroundColor: '#f8fafc', 
+            border: '1px solid #e2e8f0', 
+            borderRadius: '16px', 
+            padding: '14px', 
+            marginBottom: '28px',
+            textAlign: 'center'
+          }}>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: '18px', marginBottom: '2px' }}>📊</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#334155' }}>Daily Signals</div>
             </div>
-            <div className="flex items-center justify-between px-5 py-3.5">
-              <span className="text-xs uppercase tracking-wider text-[#8A8478] font-semibold">Telegram</span>
-              <Link
-                href={TELEGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1C2B28] text-sm font-medium hover:text-[#5C7A6E] underline decoration-[#B08D57]/50 underline-offset-4 truncate max-w-[220px]"
-              >
-                t.me/RW_Trade_Guides
-              </Link>
+            <div style={{ flex: 1, borderLeft: '1px solid #cbd5e1', borderRight: '1px solid #cbd5e1' }}>
+              <div style={{ fontSize: '18px', marginBottom: '2px' }}>🌴</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#334155' }}>Early Freedom</div>
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: '18px', marginBottom: '2px' }}>💎</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#334155' }}>VIP Community</div>
             </div>
           </div>
 
-          {/* CTAs — stamped ledger entries */}
-          <div className="space-y-3">
-            <Link
+          {/* Action Interactive Buttons (Cleaned up: No duplicate raw text block) */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            
+            {/* Native Styled WhatsApp Button */}
+            <Link 
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between w-full bg-[#1C2B28] hover:bg-[#16211E] text-[#F6F3EC] py-4 px-5 rounded-sm font-medium transition-colors duration-200"
+              style={{ 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center', 
+                width: '100%', 
+                backgroundColor: '#128C7E', 
+                color: '#ffffff', 
+                padding: '16px 20px', 
+                borderRadius: '16px', 
+                fontWeight: '700', 
+                fontSize: '16px',
+                textDecoration: 'none',
+                boxSizing: 'border-box',
+                boxShadow: '0 4px 12px rgba(18, 140, 126, 0.15)'
+              }}
             >
-              <div className="flex items-center gap-3">
-                <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
-                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4 0 11.95 0c3.176.001 6.163 1.24 8.404 3.485 2.242 2.246 3.476 5.237 3.475 8.417-.004 6.557-5.338 11.907-11.893 11.907-2.003-.001-3.973-.507-5.731-1.464L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.528 2.028 14.066.999 11.945 1c-5.443 0-9.87 4.371-9.874 9.799-.001 1.745.474 3.447 1.373 4.936l-.99 3.616 3.692-.957z"/>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                {/* SVG WhatsApp Vector Graphic */}
+                <svg style={{ width: '20px', height: '20px', fill: '#ffffff' }} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
-                <span className="text-[15px]">Message on WhatsApp</span>
+                <span>Chat on WhatsApp</span>
               </div>
-              <span className="text-base font-light text-[#B08D57] transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
+              <span style={{ fontSize: '18px', fontWeight: '300' }}>→</span>
             </Link>
-
-            <Link
+            
+            {/* Native Styled Telegram Button */}
+            <Link 
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between w-full bg-transparent hover:bg-[#1C2B28]/5 text-[#1C2B28] py-4 px-5 rounded-sm font-medium border border-[#1C2B28]/25 transition-colors duration-200"
+              style={{ 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center', 
+                width: '100%', 
+                backgroundColor: '#0088cc', 
+                color: '#ffffff', 
+                padding: '16px 20px', 
+                borderRadius: '16px', 
+                fontWeight: '700', 
+                fontSize: '16px',
+                textDecoration: 'none',
+                boxSizing: 'border-box',
+                boxShadow: '0 4px 12px rgba(0, 136, 204, 0.15)'
+              }}
             >
-              <div className="flex items-center gap-3">
-                <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
-                  <path d="M11.944 0C5.344 0 0 5.344 0 11.944c0 5.622 3.88 10.331 9.133 11.594.46.084.629-.2.629-.444 0-.218-.008-.794-.012-1.56-3.32.721-4.02-1.6-4.02-1.6-.543-1.38-1.327-1.748-1.327-1.748-1.084-.741.082-.726.082-.726 1.199.084 1.83 1.232 1.83 1.232 1.065 1.825 2.794 1.298 3.475.992.108-.772.417-1.298.759-1.597-2.65-.301-5.437-1.325-5.437-5.9 0-1.303.466-2.368 1.23-3.103-.123-.302-.533-1.516.117-3.06 0 0 1.002-.321 3.282 1.224a11.442 11.442 0 016.008 0c2.277-1.545 3.277-1.224 3.277-1.224.653 1.544.243 2.758.12 3.06.767.735 1.227 1.8 1.227 3.103 0 4.586-2.792 5.596-5.449 5.891.428.37.812 1.101.812 2.219 0 1.603-.015 2.895-.015 3.288 0 .247.167.533.634.442C20.125 22.271 24 17.564 24 11.944 24 5.344 18.656 0 11.944 0z"/>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                {/* SVG Telegram Vector Graphic */}
+                <svg style={{ width: '20px', height: '20px', fill: '#ffffff' }} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.46 2.75-2.67.01-.03.01-.14-.06-.2-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.41-.49.33-.93.5-1.33.49-.44-.01-1.29-.25-1.92-.45-.77-.25-1.39-.39-1.34-.83.03-.23.35-.46.97-.71 3.82-1.66 6.37-2.75 7.66-3.27 3.65-1.48 4.41-1.74 4.9-.15z"/>
                 </svg>
-                <span className="text-[15px]">Message on Telegram</span>
+                <span>Chat on Telegram</span>
               </div>
-              <span className="text-base font-light text-[#5C7A6E] transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
+              <span style={{ fontSize: '18px', fontWeight: '300' }}>→</span>
             </Link>
           </div>
 
-          {/* Disclaimer — quiet, honest, in the ledger's own voice */}
-          <p className="text-[11px] leading-relaxed text-[#8A8478] mt-8 pt-6 border-t border-[#1C2B28]/10">
-            Educational content only, not financial advice. Markets carry
-            risk, including loss of principal. Past results don&apos;t
-            guarantee future ones &mdash; make your own decisions or consult
-            a licensed advisor.
-          </p>
         </div>
       </div>
     </div>
